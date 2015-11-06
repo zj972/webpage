@@ -17,10 +17,10 @@ $(document).ready(function() {
 function show(data) {
   for (var i = data.length - 1; i >= 0; i--) {
     data[i]
-    if (i % 2 == 0) {
-      $('.header').after("<div class='note'><div class='note-photo'><img src='img/girl.png' id='img_boy2'></div><div class='note-tip'><img src='img/boom.png'></div><div id='show' class='note-message'><h2 class='note-ht'>TO     " + data[i].to + "</h2><div class='note-hm'><p>" + data[i].content + "</p></div><h2 class='note-hb'>FROM     " + data[i].from + "</h2></div></div>");
+    if (data[i].id % 2 == 0) {
+      $('.header').after("<div class='note'><div class='note-photo'><img src='img/girl.png' id='img_girl'></div><div class='note-tip'><span id='n-" + data[i].id + "'  onclick='javascript:nice(this);'>" + data[i].nice + "</span></div><div id='show' class='note-message'><h2 class='note-ht'>TO     " + data[i].to + "</h2><div class='note-hm'>" + data[i].content + "</div><h2 class='note-hb'>FROM     " + data[i].from + "</h2></div></div>");
     } else {
-      $('.header').after("<div class='note'><div class='note-photo'><img src='img/boy.png' id='img_boy2'></div><div class='note-tip'><img src='img/boom.png'></div><div id='show' class='note-message'><h2 class='note-ht'>TO     " + data[i].to + "</h2><div class='note-hm'><p>" + data[i].content + "</p></div><h2 class='note-hb'>FROM     " + data[i].from + "</h2></div></div>");
+      $('.header').after("<div class='note'><div class='note-photo'><img src='img/boy.png' id='img_boy2'></div><div class='note-tip'><span id='n-" + data[i].id + "'  onclick='javascript:nice(this);'>" + data[i].nice + "</span></div><div id='show' class='note-message'><h2 class='note-ht'>TO     " + data[i].to + "</h2><div class='note-hm'>" + data[i].content + "</div><h2 class='note-hb'>FROM     " + data[i].from + "</h2></div></div>");
     }
     //$('#header').after("<div class='show'><p>"+data[i].content+"</p><span>"+data[i].from+"</span><span>"+data[i].to+"</span><button id='n-"+data[i].id+"' class='nice' type='button' onclick='nice(this)';>赞</button><span>"+data[i].nice+"</span></div>")
   }
@@ -47,7 +47,11 @@ $(document).ready(function() {
           id = data.id;
           echo(data.id);
           //console.log($('#content').val());
-          window.location.reload();
+          $('#content').val('');
+          $('#to').val('');
+          $('#from').val('');
+          hideDialog();
+          //window.location.reload();
         } else {
           alert("出现错误：" + data.msg);
         }
@@ -60,18 +64,22 @@ $(document).ready(function() {
 });
 
 function echo(id) {
-  $('.header').after("<div class='note'><div class='note-photo'><img src='img/boy.png' id='img_boy2'></div><div class='note-tip'><img src='img/boom.png'></div><div id='show' class='note-message'><h2 class='note-ht'>TO     " + $("#to").val() + "</h2><div class='note-hm'><p>" + $("#content").val() + "</p></div><h2 class='note-hb'>FROM     " + $("#from").val() + "</h2></div></div>");
-  //$('#show').prepend("<div class='show'><p>"+$("#content").val()+"</p><span>"+$("#from").val()+"</span><span>"+$("#to").val()+"</span><button id='n-"+id+"' class='nice' type='button' onclick='nice(this)';>赞</button><span>0</span></div>")
+  if (id % 2 == 0) {
+    $('.header').after("<div class='note'><div class='note-photo'><img src='img/girl.png' id='img_girl'></div><div class='note-tip'><span id='n-" + id + "'  onclick='javascript:nice(this);'>0</span></div><div id='show' class='note-message'><h2 class='note-ht'>TO     " + $("#to").val() + "</h2><div class='note-hm'>" + $("#content").val() + "</div><h2 class='note-hb'>FROM     " + $("#from").val() + "</h2></div></div>");
+  } else {
+    $('.header').after("<div class='note'><div class='note-photo'><img src='img/boy.png' id='img_boy2'></div><div class='note-tip'><span id='n-" + id + "'  onclick='javascript:nice(this);'>0</span></div><div id='show' class='note-message'><h2 class='note-ht'>TO     " + $("#to").val() + "</h2><div class='note-hm'>" + $("#content").val() + "</div><h2 class='note-hb'>FROM     " + $("#from").val() + "</h2></div></div>");
+    //$('#show').prepend("<div class='show'><p>"+$("#content").val()+"</p><span>"+$("#from").val()+"</span><span>"+$("#to").val()+"</span><button id='n-"+id+"' class='nice' type='button' onclick='nice(this)';>赞</button><span>0</span></div>")
+  }
 }
 //点赞
 function nice(element) {
   var id_n = element.id;
   //console.log(id[0]);
-  $("#" + id_n).html("取消赞");
-  // $("#"+id_n).attr("disabled",true);
-  var num = $("#" + id_n).next().html();
-  $("#" + id_n).next().html(parseInt(num) + 1);
-  num = $("#" + id_n).next().html();
+  $("#" + id_n).css("background", "url(./img/boom_nice.png) no-repeat")
+    // $("#"+id_n).attr("disabled",true);
+  var num = $("#" + id_n).html();
+  $("#" + id_n).html(parseInt(num) + 1);
+  num = $("#" + id_n).html();
   //console.log(num);
   $("#" + id_n).removeAttr("onclick");
   $("#" + id_n).attr("onclick", "can_nice(this)");
@@ -102,11 +110,11 @@ function nice(element) {
 function can_nice(element) {
   var id_n = element.id;
   //console.log(id[0]);
-  $("#" + id_n).html("赞");
-  // $("#"+id_n).attr("disabled",true);
-  var num = $("#" + id_n).next().html();
-  $("#" + id_n).next().html(parseInt(num) - 1);
-  num = $("#" + id_n).next().html();
+  $("#" + id_n).css("background", "url(./img/boom.png) no-repeat")
+    // $("#"+id_n).attr("disabled",true);
+  var num = $("#" + id_n).html();
+  $("#" + id_n).html(parseInt(num) - 1);
+  num = $("#" + id_n).html();
   //console.log(num);
   $("#" + id_n).removeAttr("onclick");
   $("#" + id_n).attr("onclick", "nice(this)");
