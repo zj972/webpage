@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+/*begin*/
+
+.title {
+  display: block;
+  color: #394357;
+  font-size: 4em;
+  text-align: center;
+  padding-top: 412px;
+}
+
+.a_box {
+  text-align: center;
+  padding-top: 67px;
+}
+
+.a_begin {
+  display: inline-block;
+  width: 70%;
+  margin: 0 auto;
+  background-color: #ea5f5f;
+  color: #ffffff;
+  text-align: center;
+  font-size: 6em;
+  line-height: 160px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  -ms-border-radius: 200px;
+  -o-border-radius: 200px;
+  border-radius: 200px;
+}
+
+.begin_box {
+  position: relative;
+  z-index: 2;
+}
+
+
+/*list*/
+
+.qaa {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #f8e4a2;
+  filter: url(Blur.svg#Blur);
+  -webkit-filter: Blur(4em);
+  -moz-filter: Blur(4em);
+  -ms-filter: Blur(4em);
+  filter: Blur(4em);
+  filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+}
+
+.nav {
+  display: block;
+  background-color: #e0e0e0;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 3.667em;
+}
+
+.answer_box {
+  color:#fff;
+  background-color: #ffbe67;
+  margin-bottom: 3.939em; 
+}
+
+.count_down, .grade {
+  display: inline-block;
+  font-size: 3em;
+  width: 4.167em;
+  height: 4.167em;
+  background-color: #ea5f5f;
+  border-radius: 0 0 .3125em .3125em;
+  text-align: center;
+  line-height: 2em;
+}
+
+.count_down {
+  margin: 0 .5em;
+}
+
+.count_down span, .grade span {
+  font-size: 1.25em;
+}
+
+.question {
+  display: block;
+  font-size: 3em;
+  padding: 1.313em .5em;
+  line-height: 1.416em;
+  color: #39445a;
+  background-color: #ffbe67;
+}
+
+.answer {
+  position: relative;
+  background-color: #f8e4a2;
+  margin-top: -3.25em;
+  padding-top: .561em;
+}
+
+.a {
+  display: block;
+  background-color: #fff;
+  color: #39445a;
+  font-size: 3em;
+  line-height: 2.083em;
+  width: 80.56%;
+  margin: 1.083em auto;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  border-radius: 1em;
+  text-align: center;
+}
+
+
+/*end*/
+
+.end {
+  height: 100%;
+  display: none;
+  position: relative;
+  z-index: 2;
+  filter: url(Blur.svg#Blur);
+  -webkit-filter: Blur(1em);
+  -moz-filter: Blur(1em);
+  -ms-filter: Blur(1em);
+  filter: Blur(1em);
+  filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+}
+
+.lv {
+  display: block;
+  font-size: 6em;
+  padding-top: 318px;
+  text-align: center;
+  color: #394357;
+}
+
+.lv_hgd {
+  display: block;
+  font-size: 3em;
+  padding: 62px 0 92px;
+  text-align: center;
+  color: #394357;
+}
+
+.again_box, .share_box {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.again, .share {
+  display: inline-block;
+  width: 59.72%;
+  margin: 0 auto;
+  background-color: #ea5f5f;
+  color: #ffffff;
+  text-align: center;
+  font-size: 3em;
+  line-height: 2.1em;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  -ms-border-radius: 200px;
+  -o-border-radius: 200px;
+  border-radius: 200px;
+}
+
+.begin_box, .end {
+  background: url(../images/bg.jpg) 100% 100%;
+}
+
+.loading {
+  position: fixed;
+  _position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../images/load.gif) center center no-repeat;
+  background-color: #fff;
+  z-index: 999;
+  display: none;
+}
+
+.answer > span{
+  position: absolute;
+  top: 20em;
+  left: 2em;
+  display: inline-block;
+  width: 2.68em;
+  height: 2.105em;
+  background: url(../images/get.png) no-repeat;
+  font-size: 1.75em;
+  text-align: center;
+  line-height: 2em;
+  color: #fff;
+  opacity: 0;
+}

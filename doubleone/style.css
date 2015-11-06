@@ -1,0 +1,105 @@
+
+body{width:100%;padding:0; 
+	margin:0;
+	text-align:center;
+	font-family:微软雅黑;
+	background-image:url(img/lu.png);
+    background-repeat : repeat;
+    background-attachment: fixed;
+	background-color:#e9f6df;}
+
+div .box-top{
+    height:178px;
+    background-color:#f04854;
+	padding-top:18px;
+	position:relative;
+	
+	
+}
+
+div .box-topbottom{
+    height:96px;
+    opacity:0.6;
+    }
+div .letf div .right{width:200px;}
+div  .left{float:left;
+		 position:absolute;left:56px;top:32px;}
+div  .right{float:right;
+         position:absolute;right:57px;top:0;}
+div  .button{float:middle;position:absolute;left:47%;bottom:0;}	
+div  .ui-mask{ 
+		width: 100%;height:100%;background: #000;
+		position: absolute;top: 0px;height: 0px;z-index: 8000;
+		opacity:0.4; filter: Alpha(opacity=40);
+	}
+div  .click{float:middle;position:absolute;left:55%;bottom:48px}	
+	
+	
+	
+	.ui-dialog{ 
+		width: 60%;height: auto;display: none;
+		position: absolute;z-index: 9000;
+		top: 0px;left: 0px;
+		border: 1px solid #D5D5D5;background: #f5f6e4;
+	}
+
+	.ui-dialog a{text-decoration: none;}
+
+	
+	}
+	
+	.ui-dialog-content{
+		padding: 15px 20px;
+	}
+	.ui-dialog-pt15{
+		padding-top: 15px;
+	}
+	.ui-dialog-pt1{background-color:#f6baae;}
+	
+	.ui-dialog-pt2{background-color:#f8cdc5;}
+
+	.ui-dialog-input{
+		width: 85%;height: 40px;
+		margin: 0px;padding:0px;
+		border: 0 solid;
+		font-size: 36px;color: #a37434;
+		text-indent: 25px;
+		outline: none;
+	}
+    .ui-dialog-input-name{background-color:#f6baae;}
+	.ui-dialog-input-say{background-color:#f8cdc5;}
+    .ui-dialog-img{padding-top:74px;}
+	.ui-dialog-input-say{
+		height:300px;
+	}
+    .float{float:left;padding-left:34px;}
+	
+	
+	
+img {max-width: 100%;height: auto;width: auto\9; /* ie8 */}
+
+@media screen and (max-width: 980px) {
+
+#pagewrap {width: 95%;}
+#content {width: 60%;padding: 3% 4%;}
+#sidebar {width: 30%;}
+#sidebar .widget {padding: 8% 7%;margin-bottom: 10px;}
+
+}
+
+@media screen and (max-width: 650px) {
+
+#header {height: auto;}
+#searchform {position: absolute;top: 5px;right: 0;}
+#main-nav {position: static;}
+#site-logo {margin: 15px 100px 5px 0;position: static;}
+#site-description {margin: 0 0 15px;position: static;}
+#content {width: auto;float: none;margin: 20px 0;}
+#sidebar {width: 100%;float: none;margin: 0;}
+
+}
+
+@media screen and (max-width: 480px) {
+html {-webkit-text-size-adjust: none;}
+#main-nav a {font-size: 90%;padding: 10px 8px;}
+}

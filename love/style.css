@@ -1,0 +1,95 @@
+
+body{
+    min-width:320px;
+	width:100%;padding:0; 
+	margin:0;
+	text-align:center;
+	font-family:"microsoft yahei", Verdana, Arial, Helvetica, sans-serif;
+	background-image:url(img/lu.png);
+    background-repeat : repeat;
+    background-attachment: fixed;
+	background-color:#e9f6df;
+	-webkit-text-size-adjust:none;}
+
+div .box-top{
+    height:178px;
+    background-color:#f04854;
+	padding-top:18px;
+	position:relative;
+	
+	
+}
+
+div .box-topbottom{
+    height:96px;
+   background: rgba(255,255,255,0.4);
+    }
+	
+div .letf ,div .right{width:30%;}
+div  .left{float:left;
+		 position:absolute;left:10%;top:17%;}
+div  .right{float:right;
+         position:absolute;right:11%;top:0;}
+div  .button{float:middle;position:absolute;left:47%;bottom:0;}	
+div  .ui-mask{ 
+		width: 100%;height:100%;background: #000;
+		position: absolute;top: 0px;height: 0px;z-index: 8000;
+		opacity:0.4; filter: Alpha(opacity=40);
+	}
+div  .click{float:middle;position:absolute;left:55%;bottom:48px}	
+	
+	
+	
+	.ui-dialog{ 
+		width: 60%;height: auto;display: none;
+		position: absolute;z-index: 9000;
+		top: 0px;left: 0px;
+		border: 1px solid #D5D5D5;background: #f5f6e4;
+	}
+
+	.ui-dialog a{text-decoration: none;}
+
+	
+	}
+	
+	.ui-dialog-content{
+		padding: 15px 20px;
+	}
+	.ui-dialog-pt15{
+		padding-top: 15px;
+	}
+	.ui-dialog-pt1{background-color:#f6baae;}
+	
+	.ui-dialog-pt2{background-color:#f8cdc5;}
+
+	.ui-dialog-input{
+		width: 85%;height: 40px;
+		margin: 0px;padding:0px;
+		border: 0 solid;
+		font-size: 36px;color: #a37434;
+		text-indent: 25px;
+		outline: none;
+	}
+    .ui-dialog-input-name{background-color:#f6baae;}
+	.ui-dialog-input-say{background-color:#f8cdc5;}
+    .ui-dialog-img{padding-top:74px;}
+	.ui-dialog-input-say{
+		height:300px;
+	}
+    .float{float:left;padding-left:34px;}
+	
+    .note{background-color:#f6baae;
+	      width:90%;
+		  height:350px;
+		  min-height:30%;
+		  position:relative;
+		  margin:5%  auto;
+		  }
+	.note-photo{position:absolute;left:8%;top:10%;}
+	.note-tip{position:absolute;left:10%;bottom:10%;}
+	.note-ht{position:absolute;right:60%;top:5px;}
+	.note-hb{position:absolute;right:20%;bottom:5px;}
+	.note-hm{position:absolute;left:40%;top:18%;margin-right:5%;width:50%;height:auto;text-align:left;font-size:26px;}
+	
+img {max-width: 100%;height: auto;width: auto\9;}
+

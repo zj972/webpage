@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+    <title>关于湖工你知道多少(</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div id="loading" class="loading"></div>
+    <script type="text/javascript">
+      var x=document.getElementById('loading');
+      x.style.display='block';
+      setTimeout("x.style.display='none';",3000);
+      // $(".loading").show(); //显示loading
+      // setTimeout("$('.loading').hide();", 3000); //隐藏loading
+    </script>
+    <div class="begin_box">
+      <p class="title">关于湖工你知道多少</p>
+      <div class="a_box"> <a class="a_begin" href="javascript:begin();">开始答题</a></div>
+    </div>
+    <div class="qaa">
+      <!-- <p class="nav">关于湖工你知道多少？（第一期）</p> -->
+      <div class="answer_box">
+        <p class="count_down">倒计时<br>
+        <span id="time">10</span></p>
+        <p class="grade">分数<br>
+        <span id="grade">0</span></p>
+        <p class="question" id="question"></p>
+      </div>
+      <div class="answer">
+        <span id="awarded">+1</span><a class="a a_1 A" id="answer1" href="javascript:onclick('A');"></a>
+        <a class="a a_2 B" id="answer2" href="javascript:onclick('B');"></a>
+        <a class="a a_3 C" id="answer3" href="javascript:onclick('C');"></a>
+        <a class="a a_4 D" id="answer4" href="javascript:onclick('D');"></a>
+      </div>
+    </div>
+    <div class="end">
+      <p class="lv">LV<span class="lv_js">15</span></p>
+      <p class="lv_hgd">你对湖工的了解程度为<span class="lv_js">15</span></p>
+      <div class="again_box"><a href="javascript:refresh();" class="again">再来一次</a></div>
+      <div class="share_box"><a href="javascript:WeiXinShareBtn();" class="share">分享至朋友圈</a></div>
+    </div>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
